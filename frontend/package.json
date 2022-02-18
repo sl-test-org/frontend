@@ -37,7 +37,7 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
-    "react-toastify": "^7.0.3",
+    "react-toastify": "^8.2.0",
     "typeface-roboto": "^1.1.13",
     "use-clipboard-copy": "^0.1.1",
     "yup": "^0.28.0"
