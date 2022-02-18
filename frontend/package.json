@@ -9,7 +9,7 @@
     "@apollo/react-hooks": "^3.1.5",
     "@apollo/react-testing": "^3.1.4",
     "@mdi/font": "^5.9.55",
-    "@sl-test-org/widgets": "^0.0.1",
+    "@sl-test-org/widgets": "^0.0.2",
     "@types/classnames": "^2.2.11",
     "@types/http-proxy-middleware": "^0.19.3",
     "@types/jest": "^26.0.20",
