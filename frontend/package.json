@@ -39,7 +39,7 @@
     "react-scripts": "^4.0.3",
     "react-toastify": "^7.0.3",
     "typeface-roboto": "^1.1.13",
-    "use-clipboard-copy": "^0.1.1",
+    "use-clipboard-copy": "^0.2.0",
     "yup": "^0.28.0"
   },
   "devDependencies": {
