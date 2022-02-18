@@ -58,7 +58,7 @@
       <dependency>
         <groupId>org.apache.jena</groupId>
         <artifactId>jena-osgi</artifactId>
-        <version>3.13.1</version>
+        <version>4.1.0</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
