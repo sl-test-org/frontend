@@ -12,7 +12,7 @@
     "@sl-test-org/widgets": "^0.0.1",
     "@types/classnames": "^2.2.11",
     "@types/http-proxy-middleware": "^0.19.3",
-    "@types/jest": "^26.0.20",
+    "@types/jest": "^27.4.0",
     "@types/lodash": "^4.14.168",
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
