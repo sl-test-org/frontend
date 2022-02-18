@@ -1,0 +1,13 @@
+.classpath
+.project
+.settings
+.checkstyle
+.idea
+bin
+target
+**/etc/*.zip
+logs
+.vs
+tdb
+backend/app/conf/
+backend/conf/
