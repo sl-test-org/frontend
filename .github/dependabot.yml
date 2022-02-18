@@ -1,12 +1,18 @@
 version: 2
+registries:
+  npm-github:
+    type: npm-registry
+    url: https://npm.pkg.github.com
+    token: ${{ secrets.NPM_TOKEN }}
 updates:
   - package-ecosystem: "maven"
     directory: "/"
-    versioning-strategy: increase
     schedule:
       interval: "daily"
   - package-ecosystem: "npm"
     directory: "/frontend"
     versioning-strategy: increase
+    registries:
+      - npm-github
     schedule:
       interval: "daily"
