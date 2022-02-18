@@ -47,7 +47,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@types/webpack-env": "^1.15.0",
-    "@types/yup": "^0.26.27",
+    "@types/yup": "^0.29.13",
     "cross-env": "^6.0.3",
     "eslint": "^7.20.0",
     "fetch-mock-jest": "^1.5.1",
