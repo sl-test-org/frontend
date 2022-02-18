@@ -6,63 +6,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.smartlogic</groupId>
-    <artifactId>smartlogic-parent</artifactId>
-    <version>0.0.184</version>
+    <groupId>sl.test.org</groupId>
+    <artifactId>sl</artifactId>
+    <version>0.0.1</version>
   </parent>
 
-  <groupId>com.smartlogic.studio</groupId>
-  <artifactId>studio</artifactId>
-  <version>5.5.0-SNAPSHOT</version>
+  <groupId>sl.test.org</groupId>
+  <artifactId>test</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-
-  <repositories>
-    <repository>
-      <id>central</id>
-      <url>http://cart:8081/repository/maven-public/</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>never</updatePolicy>
-      </snapshots>
-    </repository>
-  </repositories>
-
-  <properties>
-    <jetty.port>5080</jetty.port>
-    <bnd.version>5.2.0</bnd.version>
-    <com.smartlogic.seswidgets.com.smartlogic.seswidgets.frontend.version>${project.version}</com.smartlogic.seswidgets.com.smartlogic.seswidgets.frontend.version>
-    <topbraid.version>6.4.3-SL01</topbraid.version>
-    <smartlogic.common.version>0.4.29</smartlogic.common.version>
-    <smartlogic-dredd.version>0.0.1-master-34</smartlogic-dredd.version>
-    <guava.version>30.1-jre</guava.version>
-  </properties>
 
   <dependencyManagement>
     <dependencies>
-      <dependency>
-        <groupId>org.osgi.enroute</groupId>
-        <artifactId>osgi-api</artifactId>
-        <version>7.0.0.1</version>
-        <type>pom</type>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.osgi.enroute</groupId>
-        <artifactId>enterprise-api</artifactId>
-        <version>7.0.0.1</version>
-        <type>pom</type>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.osgi.enroute</groupId>
-        <artifactId>impl-index</artifactId>
-        <version>7.0.0.1</version>
-        <type>pom</type>
-        <scope>runtime</scope>
-      </dependency>
       <dependency>
         <groupId>org.apache.felix</groupId>
         <artifactId>org.apache.felix.framework</artifactId>
@@ -101,17 +56,6 @@
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>com.google.guava</groupId>
-        <artifactId>guava</artifactId>
-        <version>${guava.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.google.guava</groupId>
-        <artifactId>guava-testlib</artifactId>
-        <version>${guava.version}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
         <groupId>org.apache.jena</groupId>
         <artifactId>jena-osgi</artifactId>
         <version>3.13.1</version>
@@ -121,136 +65,6 @@
         <groupId>commons-configuration</groupId>
         <artifactId>commons-configuration</artifactId>
         <version>1.10</version>
-      </dependency>
-      <dependency>
-        <groupId>org.topbraid</groupId>
-        <artifactId>org.topbraid.lib.hamcrest</artifactId>
-        <version>${topbraid.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.topbraid</groupId>
-        <artifactId>org.topbraid.shacl</artifactId>
-        <version>${topbraid.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.topbraid</groupId>
-        <artifactId>org.topbraid.shaclx</artifactId>
-        <version>${topbraid.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.topbraid</groupId>
-        <artifactId>org.topbraid.lib.jena</artifactId>
-        <version>${topbraid.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.topbraid</groupId>
-        <artifactId>org.topbraid.lib.junit</artifactId>
-        <version>${topbraid.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic</groupId>
-        <artifactId>com.smartlogic.common.servlet</artifactId>
-        <version>${smartlogic.common.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic</groupId>
-        <artifactId>com.smartlogic.common</artifactId>
-        <version>${smartlogic.common.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic</groupId>
-        <artifactId>com.smartlogic.common.lib.jsoup</artifactId>
-        <version>${smartlogic.common.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.cachecontrol</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.core</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.graphql</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.graphql.api</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.auth</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.frontend</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.proxy</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.publisher</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.licence</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.logback</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.session</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.permissions</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.krt</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.service</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.service.rest</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.monitor</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.cors</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.studio</groupId>
-        <artifactId>com.smartlogic.studio.token</artifactId>
-        <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.felix</groupId>
@@ -303,16 +117,6 @@
         <version>2.12.1</version>
       </dependency>
       <dependency>
-        <groupId>com.smartlogic</groupId>
-        <artifactId>com.smartlogic.common.servlet.frontend</artifactId>
-        <version>${smartlogic.common.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic.seswidgets</groupId>
-        <artifactId>com.smartlogic.seswidgets.frontend</artifactId>
-        <version>${com.smartlogic.seswidgets.com.smartlogic.seswidgets.frontend.version}</version>
-      </dependency>
-      <dependency>
         <groupId>org.assertj</groupId>
         <artifactId>assertj-core</artifactId>
         <version>3.19.0</version>
@@ -329,16 +133,6 @@
         <artifactId>mockito-core</artifactId>
         <version>3.7.7</version>
         <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic</groupId>
-        <artifactId>com.smartlogic.common.studio.services</artifactId>
-        <version>${smartlogic.common.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.smartlogic</groupId>
-        <artifactId>com.smartlogic.common.license</artifactId>
-        <version>${smartlogic.common.version}</version>
       </dependency>
       <dependency>
         <groupId>commons-io</groupId>
@@ -378,128 +172,8 @@
     </dependencies>
   </dependencyManagement>
 
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>biz.aQute.bnd</groupId>
-          <artifactId>bnd-maven-plugin</artifactId>
-          <version>${bnd.version}</version>
-          <configuration>
-            <bnd>
-              <![CDATA[
-                Bundle-SymbolicName: ${project.artifactId}
-                -contract: *
-              ]]>
-            </bnd>
-          </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>bnd-process</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <configuration>
-            <archive>
-              <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-            </archive>
-            <skipIfEmpty>true</skipIfEmpty>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>biz.aQute.bnd</groupId>
-          <artifactId>bnd-indexer-maven-plugin</artifactId>
-          <version>${bnd.version}</version>
-          <configuration>
-            <localURLs>REQUIRED</localURLs>
-            <attach>false</attach>
-            <includeJar>true</includeJar>
-          </configuration>
-          <executions>
-            <execution>
-              <id>index</id>
-              <goals>
-                <goal>index</goal>
-              </goals>
-              <configuration>
-                <indexName>${project.artifactId}</indexName>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>biz.aQute.bnd</groupId>
-          <artifactId>bnd-resolver-maven-plugin</artifactId>
-          <version>${bnd.version}</version>
-          <configuration>
-            <failOnChanges>false</failOnChanges>
-          </configuration>
-          <executions>
-            <execution>
-              <phase>prepare-package</phase>
-              <goals>
-                <goal>resolve</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>biz.aQute.bnd</groupId>
-          <artifactId>bnd-export-maven-plugin</artifactId>
-          <version>${bnd.version}</version>
-          <executions>
-            <execution>
-              <goals>
-                <goal>export</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.eclipse.jetty</groupId>
-          <artifactId>jetty-maven-plugin</artifactId>
-          <executions>
-            <execution>
-              <id>default-cli</id>
-              <configuration>
-                <systemProperties>
-                  <systemProperty>
-                    <name>org.osgi.framework.storage</name>
-                    <value>${project.build.directory}/felix-cache</value>
-                  </systemProperty>
-                </systemProperties>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
-
-  <profiles>
-    <profile>
-      <id>tests</id>
-      <activation>
-        <property>
-          <name>!skipTests</name>
-        </property>
-      </activation>
-      <modules>
-        <module>tests</module>
-      </modules>
-    </profile>
-  </profiles>
-
   <modules>
     <module>frontend</module>
-    <module>backend</module>
-    <module>webapp</module>
-    <module>webapp-auth</module>
   </modules>
 
 </project>
