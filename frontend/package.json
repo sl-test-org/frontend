@@ -7,7 +7,7 @@
     "@apollo/react-common": "^3.1.4",
     "@apollo/react-components": "^3.1.5",
     "@apollo/react-hooks": "^3.1.5",
-    "@apollo/react-testing": "^3.1.4",
+    "@apollo/react-testing": "^4.0.0",
     "@mdi/font": "^5.9.55",
     "@sl-test-org/widgets": "^0.0.1",
     "@types/classnames": "^2.2.11",
