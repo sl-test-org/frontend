@@ -48,7 +48,7 @@
     "@testing-library/react": "^11.2.5",
     "@types/webpack-env": "^1.15.0",
     "@types/yup": "^0.26.27",
-    "cross-env": "^6.0.3",
+    "cross-env": "^7.0.3",
     "eslint": "^7.20.0",
     "fetch-mock-jest": "^1.5.1",
     "get-graphql-schema": "^2.1.2",
