@@ -40,7 +40,7 @@
     "react-toastify": "^7.0.3",
     "typeface-roboto": "^1.1.13",
     "use-clipboard-copy": "^0.1.1",
-    "yup": "^0.28.0"
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@testing-library/dom": "^7.29.6",
